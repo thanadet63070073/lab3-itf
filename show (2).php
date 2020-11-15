@@ -16,7 +16,7 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$res = mysqli_query($conn, 'SELECT * FROM guestbook');
+$res = mysqli_query($conn, 'SELECT * FROM lab3');
 ?>
 <table width="600" border="1" class="table table-dark table-striped">>
   <thead>
@@ -27,7 +27,6 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
     </tr>
   </thead>
 <?php
-#ดึงข้อมูลมาแสดงผล
 while($Result = mysqli_fetch_array($res))
 {
 ?>
