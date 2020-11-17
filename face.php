@@ -24,13 +24,13 @@ while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-     <td><?php echo $Result['Name'];?></div></td>
-     <td><?php echo $Result['Comment'];?></td>
-     <td>
+    <td><?php echo $Result['Name'];?></div></td>
+    <td><?php echo $Result['Comment'];?></td>
+    <td>
       <form name="delete_name" action="delete.php" medthod="post">
-       <div align="center"><input type="Submit" name="del_name" value="ลบ" /></div>
+        <div align="center"><input type="Submit" name="del_name" value="ลบ" /></div>
       </form>
-      </td>
+    </td>
   </tr>
 <?php
 }
