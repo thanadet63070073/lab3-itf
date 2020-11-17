@@ -1,5 +1,5 @@
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=tis-620">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <?php
 $conn = mysqli_init();
@@ -14,7 +14,7 @@ $comment = $_POST['comment'];
 $sql = "INSERT INTO guestbook (Name , Comment) VALUES ('$name', '$comment')";
 
 if (mysqli_query($conn, $sql)) {
-    header("Location: face.php");
+    echo "New record created successfully";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
