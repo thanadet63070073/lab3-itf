@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=tis-620">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>ITF Lab</title>
 </head>
 <body>
@@ -26,6 +26,10 @@ while($Result = mysqli_fetch_array($res))
   <tr>
      <td><?php echo $Result['Name'];?></div></td>
      <td><?php echo $Result['Comment'];?></td>
+     <td>
+       <form name="delete_name" action="delete.php" medthod="post">
+       <div align="center"><input type="Submit" name="del_name" value="ลบ" /></div>
+      </td>
   </tr>
 <?php
 }
