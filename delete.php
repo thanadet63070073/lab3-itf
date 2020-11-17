@@ -8,8 +8,8 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$name_id = $_GET['name_id']
-$q = "DELETE FROM name_id WHERE name_id='$name_id'";
+$name_id = $_GET['Name_ID']
+$q = "DELETE FROM guestbook WHERE Name_ID='$name_id'";
 $objQuery = mysqli_query($conn, $q);
 if ($objQuery) {
     header("Location: face.php");
