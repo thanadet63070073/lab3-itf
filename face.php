@@ -29,7 +29,10 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><a href="delete.php?id=<?php echo result["id"];?>">ลบ</a>
-    <a href="edit.php?id=<?php echo $result["id"];?>">แก้ไข</td>
+    <form name="editform" action="edit.php" medthod="post">
+      <input type="submit" value="แก้ไข" />
+    </form>
+    </td>
   </tr>
 <?php
 }
