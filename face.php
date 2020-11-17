@@ -15,6 +15,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <table border="1">
   <tr>
+    <th width="500"> <div align="center">ID</idv></th>
     <th width="500"> <div align="center">Name</div></th>
     <th width="1000"> <div align="center">Comment </div></th>
     <th width="500"> <div align="center">Action </div></th>
@@ -24,9 +25,10 @@ while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
+    <td><?php echo $Result['id'];?></div></td>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
-    <td><a href="https://lab3-itf.azurewebsites.net/delete.php?id=<?php echo $objresult["id"];?>">ลบ</a></td>
+    <td><a href="delete.php?id=<?php echo $objresult['id'];?>">ลบ</a></td>
   </tr>
 <?php
 }
