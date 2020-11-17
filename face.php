@@ -26,17 +26,12 @@ while($Result = mysqli_fetch_array($res))
   <tr>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
-    <td align="center"><a href="deletedata.php?EmployeeID=<?php echo $objResult['EmployeeID']; ?>">ลบ</a></td>
+    <td><a href="delete.php?id=<?php echo $objResult['d_id'];?>">ลบ</a></td>
   </tr>
 <?php
 }
 ?>
 </table>
-</body>
-<body>
-  <form name="add_form" action="form.html" medthod="post"><br>
-    <div align="center"><input type="submit"  value="เพิ่ม" /></div>
-  </form>
 <?php
 mysqli_close($conn);
 ?>
