@@ -26,11 +26,7 @@ while($Result = mysqli_fetch_array($res))
   <tr>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
-    <td>
-      <form name="Name_ID" action="delete.php" medthod="post">
-        <div align="center"><input type="submit" name="Name_ID" value="ลบ" /></div>
-      </form>
-    </td>
+    <td align="center"><a href="delete.php?Name_ID=<?php echo $objResult["Name_ID"]; ?>">Delete</a></td>
   </tr>
 <?php
 }
