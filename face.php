@@ -25,7 +25,7 @@ while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <td><?php echo $Result['id'];?></div></td>
+    <td><?php echo $Result['ID_name'];?></div></td>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><a href="delete.php?id=<?php echo $objresult['id'];?>">ลบ</a></td>
