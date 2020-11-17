@@ -10,7 +10,7 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $sql = '
-    DELETE FROM delete_name
+    DELETE FROM Name
     WHERE del_name = ' . $delete_ID . ';
     ';
 
