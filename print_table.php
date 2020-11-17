@@ -3,7 +3,7 @@
 <body>
   <?php
   require('connect.php');
-  $res = mysqli_query($conn1, 'SELECT * FROM guestbook');
+  $res = mysqli_query($conn, 'SELECT * FROM guestbook');
   ?>
   <table width="600" border="1">
   <tr>
