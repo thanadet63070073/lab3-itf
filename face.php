@@ -26,7 +26,6 @@ while($Result = mysqli_fetch_array($res))
   <tr>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
-    <td><a href="https://lab3-itf.azurewebsites.net/delete.php?Name_id=<?php echo $record">ลบ</a></td>
   </tr>
 <?php
 }
