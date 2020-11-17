@@ -5,12 +5,12 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$Name = $_REQUEST['Name'];
-$Comment = $_REQUEST['Comment'];
+$Name = $_POST['Name'];
+$Comment = $_POST['Comment'];
 $sql = "
 	UPDATE guestbook
 	Name = '" . $Name . "', 
-	Comment = '" . $Comment . "', 
+	Comment = '" . $Comment . "',
 $objQuery = mysqli_query($conn, $sql);
 
 if ($objQuery) {
