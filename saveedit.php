@@ -7,10 +7,7 @@ if (mysqli_connect_errno($conn))
 }
 $Name = $_POST['Name'];
 $Comment = $_POST['Comment'];
-$sql = "
-	UPDATE guestbook
-	Name = '" . $Name . "', 
-	Comment = '" . $Comment . "',
+$sql = "UPDATE guestbook (Name, Comment) values($Name, $Comment)";
 $objQuery = mysqli_query($conn, $sql);
 
 if ($objQuery) {
