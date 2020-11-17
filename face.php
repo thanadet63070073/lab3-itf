@@ -24,14 +24,9 @@ while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <td><?php $Result['Name_ID'];?></div></td>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
-    <td>
-      <form name="Name_ID" action="delete.php" medthod="post">
-        <div align="center"><input type="submit" name="Name_ID" value="ลบ" /></div>
-      </form>
-    </td>
+    <td><a href="https://lab3-itf.azurewebsites.net/delete.php?Name_id=<?php echo $record">ลบ</a></td>
   </tr>
 <?php
 }
