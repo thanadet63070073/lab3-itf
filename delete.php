@@ -8,16 +8,14 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$delete_name = $_REQUEST['Name_ID'];
-$sql = 'DELETE FROM guestbook WHERE Name_ID = '$delete_name'';
+$strsql = "delete form guestbook where Name_ID = '".$_GET["Name_ID"]."' ";
 
-$objQuery = mysqli_query($conn, $sql);
+$objQuery = mysqli_query($strsql);
 if ($objQuery) {
-    echo "Record " . $delete_name . " was Deleted.";
+    echo "Success ";
 } else {
-    echo "Error : Delete";
+    echo "Error ";
 }
-
 mysqli_close($conn); // ปิดฐานข้อมูล
 echo "<br><br>";
 echo "--- END ---";
