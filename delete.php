@@ -9,7 +9,10 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$sql = 'DELETE FROM delete_name WHERE del_name = ' . $delete_name . ';';
+$sql = '
+    DELETE FROM delete_name
+    WHERE del_name = ' . $delete_ID . ';
+    ';
 
 $objQuery = mysqli_query($conn, $sql);
 if ($objQuery) {
