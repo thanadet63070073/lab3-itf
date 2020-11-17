@@ -1,12 +1,9 @@
 <?php
-$conn1 = mysqi_init();
-$conn = mysqli_connect($conn1, 'lab3itf.mysql.database.azure.com', 'tee@lab3itf', 'thanadet123@', 'itflab', 3306);
-
-if (!$conn) {
-	die("Connection : failed (เชื่อมต่อฐานข้อมูล ไม่ สำเร็จ)" . mysqli_connect_error());
-} else {
-	"Connection : OK (เชื่อมต่อฐานข้อมูลสำเร็จ)";
+$conn = mysqli_init();
+mysqli_real_connect($conn, 'lab3itf.mysql.database.azure.com', 'tee@lab3itf', 'thanadet123@', 'itflab', 3306);
+if (mysqli_connect_errno($conn))
+{
+    die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-
 mysqli_close($conn);
 ?>
