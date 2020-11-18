@@ -19,9 +19,9 @@ $row = mysqli_fetch_array($res)
 <div class="container-fluid">
     <form action = "edit.php?id=<?php echo $row['id']; ?>" method = "post" id="CommentForm" class="form-group">
         Name:<br>
-        <input type="text" name = "name" id="idName" value="<?php echo "$row[Name]"; ?>"> <br>
+        <input type="text" name = "Name" id="idName" value="<?php echo "$row[Name]"; ?>"> <br><br>
         Comment:<br>
-        <input type="text" name = "comment" id="idComment" value="<?php echo "$row[Comment]"; ?>"> <br><br>
+        <input type="text" name = "Comment" id="idComment" value="<?php echo "$row[Comment]"; ?>"> <br><br>
         <input type="submit" id="commentBtn"class="btn btn-outline-warning" value="แก้ไข">
     </form> 
 </div>
