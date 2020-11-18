@@ -13,7 +13,7 @@ $comment = $_POST['Comment'];
 
 $sql = "UPDATE guestbook SET Name = '$name', Comment = '$comment' WHERE id = '$id'"; 
 if (mysqli_query($conn, $sql)) {
-    echo "Update sucess"; 
+    header("Location: face.php");
 } else {
     echo "Error: " . mysqli_error($conn);
 }

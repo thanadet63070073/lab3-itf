@@ -10,7 +10,7 @@ if (mysqli_connect_errno($conn))
 $id = $_GET['id'];
 $sql = "DELETE FROM  guestbook WHERE id = $id";
 if (mysqli_query($conn, $sql)) {
-    echo "Record " . $id . " was Deleted.";
+    header("Location: face.php");
 } else {
     echo "Error : Delete" . mysqli_error($conn);
 }
