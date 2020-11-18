@@ -7,9 +7,9 @@ if (mysqli_connect_errno($conn))
 }
 
 $id = $_GET['id'];
-$name = $_POST['name'];
-$comment = $_POST['comment'];
-$sql = "UPDATE guestbook SET Name = $name, Comment = $comment WHERE id = $id"; 
+$name = $_POST['Name'];
+$comment = $_POST['Comment'];
+$sql = "UPDATE guestbook SET Name = '$name', Comment = '$comment' WHERE id = '$id'"; 
 if (mysqli_query($conn, $sql)) {
     echo "Update sucess"; 
 } else {
