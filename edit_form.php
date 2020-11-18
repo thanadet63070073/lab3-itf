@@ -17,7 +17,7 @@ $res = mysqli_query($conn, "SELECT * FROM guestbook WHERE id = $id");
 $row = mysqli_fetch_array($res)
 ?>
 <div class="container-fluid">
-    <form action = "edit.php?id=<?php echo $row['id']; ?>" method = "post" id="CommentForm" class="form-group">
+    <form action = "edit.php?id=<?php echo $row[$id]; ?>" method = "post" id="CommentForm" class="form-group">
         Name:<br>
         <input type="text" name = "Name" id="idName" value="<?php echo "$row[Name]"; ?>"> <br><br>
         Comment:<br>
