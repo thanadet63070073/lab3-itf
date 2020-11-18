@@ -6,13 +6,13 @@
 </head>
 <body>
 <?php
-$id = $_GET['id'];
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'lab3itf.mysql.database.azure.com', 'tee@lab3itf', 'thanadet123@', 'itflab', 3306);
 if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
+$id = $_GET['id'];
 $res = mysqli_query($conn, "SELECT * FROM guestbook WHERE id = $id");
 $row = mysqli_fetch_array($res)
 ?>
@@ -21,7 +21,7 @@ $row = mysqli_fetch_array($res)
         Name:<br>
         <input type="text" name = "name" id="idName" value="<?php echo "$row[Name]"; ?>"> <br>
         Comment:<br>
-        <input type="text" name = "comment" id="idComment" value="<?php echo "$row[Comment]"; ?>"> <br>
+        <input type="text" name = "comment" id="idComment" value="<?php echo "$row[Comment]"; ?>"> <br><br>
         <input type="submit" id="commentBtn"class="btn btn-outline-warning" value="แก้ไข">
     </form> 
 </div>
