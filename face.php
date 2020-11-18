@@ -1,5 +1,6 @@
 <html>
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>ITF Lab</title>
 </head>
@@ -15,7 +16,6 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <table border="1">
   <tr>
-    <th width="500"> <div align="center">ID</idv></th>
     <th width="500"> <div align="center">Name</div></th>
     <th width="1000"> <div align="center">Comment </div></th>
     <th width="500"> <div align="center">Action </div></th>
@@ -25,10 +25,10 @@ while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <td><?php echo $Result['id'];?></div></td>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
-    <td><a href="delete.php?id=<?php echo result["id"];?>">ลบ</a><form name="editform" action="edit.php" medthod="post"><input type="submit" value="แก้ไข" /></form>
+    <td><a href="delete.php?id=<?php echo $Result['id']?>" class="btn btn-outline-danger">ลบ</a>
+        <a href="edit.php?id=<?php echo $Result['id']?>"class="btn btn-outline-danger">แก้ไข</a>
     </td>
   </tr>
 <?php
