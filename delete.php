@@ -12,8 +12,8 @@ $sql = "DELETE FROM guestbook WHERE id=$id";
 if (mysqli_query($conn, $sql))) {
     echo "Record " . $ID . " was Deleted.";
 } else {
-    echo "Error : Delete"; mysqli_error($conn);
+    echo "Error : Delete" mysqli_error($conn);
 }
 
-mysqli_close($conn); // ปิดฐานข้อมูล
+mysqli_close($conn);
 ?>
