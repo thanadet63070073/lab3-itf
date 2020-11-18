@@ -8,12 +8,12 @@ if (mysqli_connect_errno($conn))
 }
 
 $id = $_GET['id'];
-$sql = "DELETE FROM guestbook WHERE id=$id";
-if (mysqli_query($conn, $sql))) {
-    echo "Record " . $ID . " was Deleted.";
+$sql = "DELETE FROM  guestbook WHERE id = $id";
+if (mysqli_query($conn, $sql)) {
+    echo "Record " . $id . " was Deleted.";
 } else {
-    echo "Error : Delete" mysqli_error($conn);
+    echo "Error : Delete" . mysqli_error($conn);
 }
 
-mysqli_close($conn);
+mysqli_close($conn); // ปิดฐานข้อมูล
 ?>
