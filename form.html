@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Comment Form</title>
 </head>
 <body>
-  <form action = "insert.php" method = "post" id="CommentForm" >
-    Name:<br>
-    <input type="text" name = "name" id="idName" placeholder="Enter Name"> <br><br>
-    Comment:<br>
-    <textarea rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment"></textarea><br><br>
-    <input type="submit" id="commentBtn" value="ส่ง">
+  <form action = "insert.php" method = "post" id="CommentForm" ><br>
+    <label>Name:</label><br>
+    <textarea cols="100" name = "name" id = "idname" placeholder = "Enter Name"></textarea><br><br>
+    <label>Comment:</label><br>
+    <textarea cols="100" name = "comment" id="idComment" placeholder="Enter Comment"></textarea><br><br>
+    <button type="submit" id="commentBtn" class="btn btn-success">ส่ง</button>
   </form> 
 </body>
 </html>

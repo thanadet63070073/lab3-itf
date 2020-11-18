@@ -17,12 +17,12 @@ $res = mysqli_query($conn, "SELECT * FROM guestbook WHERE id = $id");
 $row = mysqli_fetch_array($res)
 ?>
 <div class="container-fluid">
-    <form action = "edit.php?id=<?php echo $row['id']; ?>" method = "post" id="CommentForm" class="form-group">
-        Name:<br>
-        <input type="text" name = "Name" id="idName" value="<?php echo "$row[Name]"; ?>"> <br><br>
+    <form action = "edit.php?id=<?php echo $row['id']; ?>" method = "post" id="CommentForm" class="form-group"><br>
+        <label>Name:</labe><br>
+        <textarea cols ="100" type="text" name = "Name" id="idName" value="<?php echo "$row[Name]"; ?>"></textarea><br><br>
         Comment:<br>
-        <input type="text" name = "Comment" id="idComment" value="<?php echo "$row[Comment]"; ?>"> <br><br>
-        <input type="submit" id="commentBtn"class="btn btn-outline-warning" value="แก้ไข">
+        <textarea cols = "100" input type="text" name = "Comment" id="idComment" value="<?php echo "$row[Comment]"; ?>"></textarea><br><br>
+        <input type="submit" id="commentBtn"class="btn btn-success" value="แก้ไข">
     </form> 
 </div>
 </body>
