@@ -15,7 +15,7 @@ if (mysqli_connect_errno($conn))
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <table border="1">
-  <tr>
+  <tr class="table-primary">
     <th width="600"> <div align="center">Name</div></th>
     <th width="1200"> <div align="center">Comment </div></th>
     <th width="115"> <div align="center">Action </div></th>
@@ -24,7 +24,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 while($Result = mysqli_fetch_array($res))
 {
 ?>
-  <tr>
+  <tr class="table-warning">
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><a href="delete.php?id=<?php echo $Result['id']?>" class="btn btn-outline-danger">ลบ</a>
@@ -38,7 +38,7 @@ while($Result = mysqli_fetch_array($res))
 </body>
 <body>
   <form name="add_form" action="form.html" medthod="post"><br>
-    <div align="center"><input type="submit"  value="เพิ่ม" /></div>
+    <div align="center"><button type="submit"  class="btn btn-primary mb-2">เพิ่ม</button></div>
   </form>
 <?php
 mysqli_close($conn);
