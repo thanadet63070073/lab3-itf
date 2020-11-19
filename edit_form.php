@@ -14,15 +14,15 @@ if (mysqli_connect_errno($conn))
 }
 $id = $_GET['id'];
 $res = mysqli_query($conn, "SELECT * FROM guestbook WHERE id = $id");
-$row = mysqli_fetch_array($res)
+$side = mysqli_fetch_array($res)
 ?>
 <div class="container-fluid">
-    <form action = "edit.php?id=<?php echo $row['id']; ?>" method = "post" id="CommentForm" class="form-group"><br>
+    <form action = "edit.php?id=<?php echo $side['id']; ?>" method = "post" id="CommentForm" class="form-group"><br>
         <label>Name:</labe><br>
-        <textarea cols ="100" type="text" name = "Name" id="idName" value="<?php echo "$row[Name]"; ?>"></textarea><br><br>
-        Comment:<br>
-        <textarea cols = "100" input type="text" name = "Comment" id="idComment" value="<?php echo "$row[Comment]"; ?>"></textarea><br><br>
-        <input type="submit" id="commentBtn"class="btn btn-success" value="แก้ไข">
+        <textarea cols ="100" type="text" name = "Name" value="<?php echo "$side[Name]"; ?>"></textarea><br><br>
+        <label>Comment:</label><br>
+        <textarea cols = "100" input type="text" name = "Comment" value="<?php echo "$side[Comment]"; ?>"></textarea><br><br>
+        <input type="submit" class="btn btn-success" value="แก้ไข">
     </form> 
 </div>
 </body>
